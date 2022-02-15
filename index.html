@@ -1,18 +1,10 @@
-<html>
+<!DOCTYPE html>
 
 <head>
-        <metacharset="UTF-8">
+    <metacharset="UTF-8">
     <title>RUN OUT OF MONEY CALCULATOR</title>
-    <link href="style.css" type="text/css" rel="stylesheet">
-        <script>
-                var ahorro=32000;
-                var gasto=1100;
-                var meses;
-                var sueldo=1200;
-                var MesesRendodeados;
-                
-                </script>
-
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+       
 
 </head>
 
@@ -20,123 +12,60 @@
     <div class="container" id= contenedor> 
     <h1>TIME LEFT CALCULTAOR </h1>
 
-    <table class="Contenido"> 
+    <table class="tabla"> 
 
         <tr>
             <td>
 
-<h3 id= ahorro>AHORRO</h3>
-</p>
-<input type="range" name="rangeAhorro" min="10000" max="100000" step= 500 value= 32000 onchange="updateTextInput(this.value);">
-</p>
-<input type="text" id="textInput" value= 31000 >
-</p>
-</td>
-<td>
-<h3 id= gastomes>GASTO MES</h3>
-</p>
-<input type="range" name="rangeGastoMes" min="350" max="1800" step= 50 value= 1100 onchange="updateTextInput2(this.value);">
-</p>
-<input type="text" id="textInput2" value="1100">
-</p>
-</td>
-<td>
-<h3 id= sueldo>SUELDO</h3>
-</p>
-<input type="range" name="rangeSueldo" min="0" max="3000" step= 50 value=1200 onchange="updateTextInput3(this.value);">
-</p>
-<input type="text" id="textInput3" value="1200">
-</p>
-</td>
+                <h3 id= ahorro> Total Savings</h3>
+                </p>
+                <div class="inputDiv">
+                    <input type="range" name="rangeAhorro" min="1000" max="100000" step= 500 value= 5000   oninput="updateTextInput(this.value);">
+                </div>
+                </p>
+
+                <p id="textInput"> 5000 €</p>
+                </p>
+            </td>
+
+            <td>
+                <h3 id= gastomes>Monthly Expenses</h3>
+                </p>
+                <div class="inputDiv">
+                <input type="range" name="rangeGastoMes" min="350" max="3500" step= 50 value= 1500 oninput="updateTextInput2(this.value);">
+                </div>
+                </p>
+                <p id="textInput2"> 1500 €</p>
+                </p>
+            </td>
+
+            <td>
+                <h3 id= sueldo> Monthly Salary</h3>
+                </p>
+                <div class="inputDiv">
+                <input type="range" name="rangeSueldo" min="0" max="6000" step= 50 value=1800 oninput="updateTextInput3(this.value);">
+                </div>    
+            </p>
+                <p id="textInput3"> 1800 €</p>
+                </p>
+            </td>
 
 
-</tr>
-</table>
+        </tr>
+    </table>
+    </div>
 
-</p>
-<!--script
 
-Hay que cambiar nombres de variables-->
-
-<script>
-        
-        function updateTextInput(val) {
-          document.getElementById('textInput').value=val; 
-          ahorro=val;
-          Calcmeses (ahorro,gasto);
-          PrintAhorro(ahorro);
-          
-        }
-
-        function updateTextInput2(val) {
-          document.getElementById('textInput2').value=val; 
-          gasto= val;
-          Calcmeses (ahorro,gasto);
-          
-          
-        }
-        function updateTextInput3(val) {
-          document.getElementById('textInput3').value=val; 
-          sueldo= val;
-          Calcmeses (ahorro,gasto);
-          
-          
-          
-        }
-
-        function Calcmeses (ahorro,gasto){
-            var meses = (ahorro) / (gasto - sueldo);
-            MesesRendodeados = Math.trunc(meses)
-
-            if(MesesRendodeados>0){
-                document.getElementById('resultado').innerHTML = MesesRendodeados +" Meses";
-            }
-            else{
-                document.getElementById('resultado').innerHTML = "INFINITOS";
-            }
-            };          
-
-            
-            
-
-</script>
-
-</p>
-<div class="resultado">
-<h3 id="resultadocss">
-        
-         <div id="resultado"> Modifica las variables </div> 
-        
-    </h3>
-   
-
-    <script type="text/javascript">
-
-   
-        
-        document.writeln(ahorro);
-        document.writeln(gasto);
-        document.writeln(sueldo);
-   
-        </script>
-         
-
-</div>
-    <!--
-
-        AHORRO 
-        <div id="divahorro"></div>
-
-        GASTO
-
-        <div id="textInput2"></div>
-
-    -->
-      
+    <div >
     
-</div>
+        <div id="resultado">  
 
+        </div>
 
+    </div> 
+        
+
+<script src="scripts/scripts.js"></script>
     
 
 </body>
