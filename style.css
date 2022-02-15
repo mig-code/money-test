@@ -1,0 +1,44 @@
+p {
+    font-family: Arial;
+  }
+  
+  h1 {
+    color: rgb(14.4%, 11.4%, 11.4%);
+    margin-left: 40px;
+  }
+  h3 {
+      color: gray ;
+  }
+  #resultadocss {
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: large;
+      color: blue;
+    
+      margin-left: 40px;
+
+  }
+  #ahorro
+  {
+      color:orange;
+  }
+  #gastomes
+  {
+      color: red;
+  }
+  #sueldo
+  {
+      color:green;
+  }
+  #contenedor{
+
+    margin-left: 120px;
+    margin-right: 240px;
+    margin-top: 20px;
+    padding-left: 20px;
+    align-content: center;
+    background-color: beige;
+   
+   
+  }
+
+  
