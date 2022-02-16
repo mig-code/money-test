@@ -7,7 +7,15 @@
        
 
 </head>
-
+<header>
+    <div id="currency">
+        Currency Selector  
+        <select id="currencySelector" onchange="updateCurrency()">
+            <option value="€">EUR</option>
+            <option value="$">USD</option>
+          </select>
+    </div>
+</header>
 <body>
     <div class="container" id= contenedor> 
     <h1>TIME LEFT CALCULTAOR </h1>
@@ -24,7 +32,7 @@
                 </div>
                 </p>
 
-                <p id="textInput"> 5000 €</p>
+                <p id="textInput"> 5000€</p>
                 </p>
             </td>
 
@@ -35,7 +43,7 @@
                 <input type="range" name="rangeGastoMes" min="350" max="3500" step= 50 value= 1500 oninput="updateTextInput2(this.value);">
                 </div>
                 </p>
-                <p id="textInput2"> 1500 €</p>
+                <p id="textInput2"> 1500€</p>
                 </p>
             </td>
 
@@ -46,7 +54,7 @@
                 <input type="range" name="rangeSueldo" min="0" max="6000" step= 50 value=1800 oninput="updateTextInput3(this.value);">
                 </div>    
             </p>
-                <p id="textInput3"> 1800 €</p>
+                <p id="textInput3"> 1800€</p>
                 </p>
             </td>
 
@@ -56,13 +64,15 @@
     </div>
 
 
-    <div >
     
-        <div id="resultado">  
+    
+    <div id="resultado">  
 
-        </div>
+    </div>
 
-    </div> 
+   
+
+    
         
 
 <script src="scripts/scripts.js"></script>
