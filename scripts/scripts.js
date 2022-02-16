@@ -14,6 +14,7 @@ function updateTextInput(val) {
           document.getElementById('textInput').textContent=val+ currencyInUse; 
           ahorro=val;
           Calcmeses ();
+          Printmeses();
         
           
         }
@@ -22,33 +23,30 @@ function updateTextInput2(val) {
           document.getElementById('textInput2').textContent=val+ currencyInUse; 
           gasto= val;
           Calcmeses ();
-          
+          Printmeses()
           
         }
 function updateTextInput3(val) {
           document.getElementById('textInput3').textContent= val+ currencyInUse; 
           sueldo= val;
           Calcmeses ();
-          
-          
+          Printmeses()
           
         }
 
-function Calcmeses (){
-            meses = (ahorro) / (gasto - sueldo);
-            MesesRendodeados = Math.trunc(meses)
+function Printmeses (){
 
-            if(gasto==sueldo){
-              var meses = (ahorro) / (gasto - sueldo);
-                   MesesRendodeados = Math.trunc(meses)
-                document.getElementById('resultado').innerHTML = "Result: You earn exactly enough to cover your expenses";
-            }else if(gasto>sueldo){
+            if(MesesRendodeados===0){
+              document.getElementById('resultado').innerHTML = "Result: You earn exactly enough to cover your expenses";
+                
+              }else if(MesesRendodeados>0 ){
                 document.getElementById('resultado').innerHTML = "Result: "+ MesesRendodeados +" months left";
-            }
-            else{
-                document.getElementById('resultado').innerHTML = "Result: You earn enough to cover your expenses";
-            }
-         }    
+              }
+                else if(MesesRendodeados<0 ){
+                    document.getElementById('resultado').innerHTML = "Result: You earn enough to cover your expenses";
+                }
+              }   
+           
          
 function updateCurrency(){
 
@@ -56,6 +54,23 @@ function updateCurrency(){
   updateTextInput(ahorro)
   updateTextInput2(gasto)
   updateTextInput3(sueldo)
+
+}
+
+function Calcmeses(){
+  if(gasto===sueldo){
+    document.getElementById("printMeses").textContent="IGUALITO"
+    MesesRendodeados=0
+
+  }else {
+  meses = (ahorro) / (gasto - sueldo)
+  MesesRendodeados = Math.trunc(meses)
+
+  document.getElementById("printMeses").textContent=MesesRendodeados
+
+  }
+  
+
 
 }
 
