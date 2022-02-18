@@ -35,14 +35,16 @@ function updateTextInput3(val) {
         }
 
 function Printmeses (){
-
-            if(MesesRendodeados===0){
+            if(meses>0 && meses<1){
+              document.getElementById('resultado').innerHTML = "Result: You are almost broke";
+            }
+            else if(meses===0){
               document.getElementById('resultado').innerHTML = "Result: You earn exactly enough to cover your expenses";
                 
-              }else if(MesesRendodeados>0 ){
+              }else if(meses>0 ){
                 document.getElementById('resultado').innerHTML = "Result: "+ MesesRendodeados +" months left";
               }
-                else if(MesesRendodeados<0 ){
+                else if(meses<0 ){
                     document.getElementById('resultado').innerHTML = "Result: You earn enough to cover your expenses";
                 }
               }   
@@ -59,15 +61,14 @@ function updateCurrency(){
 
 function Calcmeses(){
   if(gasto===sueldo){
-    document.getElementById("printMeses").textContent="IGUALITO"
+   // Use to debug errors in html document.getElementById("printMeses").textContent="IGUALITO"
     MesesRendodeados=0
 
   }else {
   meses = (ahorro) / (gasto - sueldo)
   MesesRendodeados = Math.trunc(meses)
 
-  document.getElementById("printMeses").textContent=MesesRendodeados
-
+ // Use to debug errors in html document.getElementById("printMeses").textContent=meses
   }
   
 
