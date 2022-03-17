@@ -36,16 +36,16 @@ function updateTextInput3(val) {
 
 function Printmeses (){
             if(meses>0 && meses<1){
-              document.getElementById('resultado').innerHTML = "Result: You are almost broke";
+              document.getElementById('resultado').textContent= "You are almost broke";
             }
             else if(meses===0){
-              document.getElementById('resultado').innerHTML = "Result: You earn exactly enough to cover your expenses";
+              document.getElementById('resultado').textContent = "You earn exactly enough to cover your expenses";
                 
               }else if(meses>0 ){
-                document.getElementById('resultado').innerHTML = "Result: "+ MesesRendodeados +" months left";
+                document.getElementById('resultado').textContent = MesesRendodeados +" months left";
               }
                 else if(meses<0 ){
-                    document.getElementById('resultado').innerHTML = "Result: You earn enough to cover your expenses";
+                    document.getElementById('resultado').textContent = "You earn enough to cover your expenses";
                 }
               }   
            

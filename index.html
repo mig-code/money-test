@@ -7,78 +7,64 @@
        
 
 </head>
-<header>
-    <div id="currency">
-        Currency Selector  
-        <select id="currencySelector" onchange="updateCurrency()">
-            <option value="€">EUR</option>
-            <option value="$">USD</option>
-          </select>
-    </div>
-</header>
+
 <body>
-    <div class="container" id= contenedor> 
-    <h1>TIME LEFT CALCULTAOR </h1>
+    <header>
+        <div class="container">
+            <h1>TIME LEFT CALCULTAOR </h1>
+            <div id="currency">
+                Currency Selector  
+                <select id="currencySelector" onchange="updateCurrency()">
+                    <option class="currency-box" value="€">EUR</option>
+                    <option class="currency-box" value="$">USD</option>
+                </select>
+            </div>
+        </div>
+    </header>
+    <div class="content-main container">
+        <div class="select-item">
+            <h3 id= ahorro> Total Savings</h3>
+            <p id="textInput"> 5000€</p>
+            <div class="inputDiv">
+                <input type="range" name="rangeAhorro" min="1000" max="100000" step= 500 value= 5000   oninput="updateTextInput(this.value);">
+            </div>
+            </p>
 
-    <table class="tabla"> 
-
-        <tr>
-            <td>
-
-                <h3 id= ahorro> Total Savings</h3>
-                </p>
-                <div class="inputDiv">
-                    <input type="range" name="rangeAhorro" min="1000" max="100000" step= 500 value= 5000   oninput="updateTextInput(this.value);">
-                </div>
-                </p>
-
-                <p id="textInput"> 5000€</p>
-                </p>
-            </td>
-
-            <td>
-                <h3 id= gastomes>Monthly Expenses</h3>
-                </p>
-                <div class="inputDiv">
+            
+            
+        </div>
+        <div class="select-item">
+            <h3 id= gastomes>Monthly Expenses</h3>
+            <p id="textInput2"> 1500€</p>
+            <div class="inputDiv">
                 <input type="range" name="rangeGastoMes" min="350" max="3500" step= 50 value= 1500 oninput="updateTextInput2(this.value);">
                 </div>
                 </p>
-                <p id="textInput2"> 1500€</p>
-                </p>
-            </td>
-
-            <td>
-                <h3 id= sueldo> Monthly Salary</h3>
-                </p>
-                <div class="inputDiv">
+                
+            
+            
+        </div>
+        <div class="select-item">
+            <h3 id= sueldo> Monthly Salary</h3>
+            <p id="textInput3"> 1800€</p>
+            <div class="inputDiv">
                 <input type="range" name="rangeSueldo" min="0" max="6000" step= 50 value=1800 oninput="updateTextInput3(this.value);">
                 </div>    
             </p>
-                <p id="textInput3"> 1800€</p>
+                
                 </p>
-            </td>
+            
+            
+        </div>
 
 
-        </tr>
-    </table>
+    </div><!-- End content main-->
+
+    <div id="resultado" class="container"> 
+        Select your income and monthly expenses
+    
     </div>
-
-
-    
-    
-    <div id="resultado">  
-
-    </div>
-    <!-- I use this div to debug errors
-        
-        <div id="printMeses">  
-
-    </div> -->
-
-   
-
-    
-        
+           
 
 <script src="scripts/scripts.js"></script>
     
